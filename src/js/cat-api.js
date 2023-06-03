@@ -66,11 +66,6 @@ function onShowLoadListAction() {
 
 }
 
-function onShowLoadListAction() {
-    refs.alertLoader.classList.toggle('is-hidden');
-    refs.select.classList.toggle('is-hidden');
-
-}
 function onShowLoadAnimalAction() {
     refs.alertLoader.classList.toggle('is-hidden');
     refs.catInfo.classList.toggle('is-hidden');
