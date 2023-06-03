@@ -8,11 +8,12 @@ function fetchBreeds(adress) {
     onShowLoadListAction();
     return fetchAnimals(adress)
         .then((response) => {
-            onShowLoadListAction();
+            
             // console.log(response[0].id);
             fetchCatByBreed(response[0].id);
-              
-            return renderSelect(response);
+            renderSelect(response);
+            onShowLoadListAction();  
+            return;
         })
 
         .catch(() => onShowError());
@@ -44,8 +45,10 @@ function fetchCatByBreed(breedId) {
     return fetchAnimals(`https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}&api_key=${API_KEY}`)
         .then((response) => {
             //   console.log(...response);
-            onShowLoadAnimalAction()
-            return renderAnimalCard(...response);
+            
+            renderAnimalCard(...response);
+            onShowLoadAnimalAction();
+            return;
         })
         .catch(() => onShowError());
        
