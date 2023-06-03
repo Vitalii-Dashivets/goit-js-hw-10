@@ -17,16 +17,15 @@ function fetchBreeds(adress) {
 
         .catch(() => onShowError());
        
-}
+};
+
 function fetchAnimals(adress) {
     return fetch(adress)
         .then((response) => {
-            return response.json();
-                           
+            return response.json();                        
         })
         .catch(() => onShowError());
-        
-}
+};
     
 
 function renderSelect(animals) {
@@ -81,4 +80,4 @@ function onShowError() {
     refs.alertError.classList.toggle('is-hidden');
 }
 
-export { fetchBreeds,fetchCatByBreed, API_KEY};
+export { fetchBreeds ,fetchCatByBreed, API_KEY};
