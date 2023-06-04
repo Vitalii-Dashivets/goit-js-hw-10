@@ -51,7 +51,10 @@ function renderSelect(animals) {
     const markup =animals.map(elem => {
                 return `<option value="${elem.id}">${elem.name}</option>`
             }).join('');
-     refs.select.insertAdjacentHTML('afterbegin', markup);
+    refs.select.insertAdjacentHTML('afterbegin', markup);
+    new SlimSelect({
+        select: '#first-select'
+    });
     return;
 };
 
@@ -72,7 +75,7 @@ function fetchCatByBreed(breedId) {
 
 function renderAnimalCard(animal) {
     
-    const markup = `<img src="${animal.url}" alt='1' width=700><div class="cat-description">
+    const markup = `<img src="${animal.url}" alt='cat' width=700><div class="cat-description">
     <p class='cat-titles'> ${animal.breeds[0].name}</p>
     <p> ${animal.breeds[0].description} </p>
     <p><span class='cat-temp'>Temperament:</span> ${animal.breeds[0].temperament}</p></div>`;
