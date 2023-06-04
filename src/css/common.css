@@ -7,7 +7,13 @@
 } */
 
 body {
-  background-color: bisque;
+  background-color: rgb(191, 184, 175);
+}
+.breed-select {
+  position: relative;
+  top: 20px;
+  left: 40%;
+  margin-bottom: 70px;
 }
 .error {
   font-size: 20px;
@@ -23,18 +29,26 @@ body {
 }
 .cat-info {
   display: flex;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
   font-style: italic;
 }
+
 .cat-titles {
+  font-size: 60px;
   font-weight: 600;
   margin-bottom: 100px;
 }
+
 .cat-description p {
   margin-bottom: 50px;
 }
+
 .cat-description {
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.cat-temp {
+  font-weight: 600;
 }

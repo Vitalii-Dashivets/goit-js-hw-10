@@ -1,7 +1,12 @@
 import "./css/style.css";
 
-import { fetchBreeds, fetchCatByBreed, API_KEY } from './js/cat-api.js';
+import { fetchBreeds, fetchCatByBreed } from './js/cat-api.js';
 import SlimSelect from 'slim-select';
+
+
+const API_KEY = 'live_qE21O52c52A37ctUcV6hliaEyBnz59hGiAFTOKXxN2VjhrYLa3zzbYTrw7v0eoiT';
+const BASE_URL = 'https://api.thecatapi.com/v1';
+
 
 const refs = {
      select : document.querySelector('.breed-select'),
@@ -11,22 +16,18 @@ const refs = {
      catInfo: document.querySelector('.cat-info'),
 }
 
-refs.select.addEventListener('change', onNewChoiceAnimal);
-// select.addEventListener('change', onNewChoiceAnimal);
-refs.alertLoader.classList.add('is-hidden');
-refs.alertError.classList.add('is-hidden');
 
-console.log((refs.animalCard));
+refs.select.addEventListener('change', onNewChoiceAnimal);
+refs.alertLoader.classList.add('is-hidden');
 
 
 function onNewChoiceAnimal(event) {
     const breed_ids = event.target.value;
-    console.log(breed_ids);
     return fetchCatByBreed(breed_ids);
        
 };
 
-fetchBreeds(`https://api.thecatapi.com/v1/breeds?${API_KEY}`);
+fetchBreeds(`${BASE_URL}/breeds?${API_KEY}`);
     
     
-export { refs};
+export { refs , API_KEY, BASE_URL};
