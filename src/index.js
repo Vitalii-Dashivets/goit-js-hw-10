@@ -1,7 +1,6 @@
 import "./css/style.css";
 
 import { fetchBreeds, fetchCatByBreed } from './js/cat-api.js';
-import SlimSelect from 'slim-select';
 
 
 const API_KEY = 'live_qE21O52c52A37ctUcV6hliaEyBnz59hGiAFTOKXxN2VjhrYLa3zzbYTrw7v0eoiT';
