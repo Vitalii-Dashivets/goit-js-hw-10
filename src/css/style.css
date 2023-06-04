@@ -1,20 +1,2 @@
-.loader {
-  font-size: 20px;
-}
-.error {
-  font-size: 20px;
-  font-weight: 700;
-  color: red;
-}
-.is-hidden {
-  visibility: hidden;
-}
-
-.cat-info {
-  font-size: 20px;
-  font-weight: 500;
-  font-style: italic;
-}
-.cat-titles {
-  font-weight: 600;
-}
+@import url('./common.css');
+@import url('./loader.css');

@@ -1,5 +1,7 @@
-import { fetchBreeds,fetchCatByBreed , API_KEY} from './js/cat-api.js';
 import "./css/style.css";
+
+import { fetchBreeds, fetchCatByBreed, API_KEY } from './js/cat-api.js';
+import SlimSelect from 'slim-select';
 
 const refs = {
      select : document.querySelector('.breed-select'),
@@ -8,7 +10,9 @@ const refs = {
      alertError: document.querySelector('.error'),
      catInfo: document.querySelector('.cat-info'),
 }
+
 refs.select.addEventListener('change', onNewChoiceAnimal);
+// select.addEventListener('change', onNewChoiceAnimal);
 refs.alertLoader.classList.add('is-hidden');
 refs.alertError.classList.add('is-hidden');
 
