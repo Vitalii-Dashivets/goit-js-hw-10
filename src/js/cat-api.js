@@ -1,7 +1,7 @@
 import {  refs, API_KEY,BASE_URL } from "../index.js";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SlimSelect from 'slim-select';
-
+import 'slim-select/dist/slimselect.css';
 
 
 Notify.init({
@@ -29,7 +29,7 @@ function fetchBreeds(adress) {
     return fetchAnimals(adress)
         .then((response) => {
             
-            fetchCatByBreed(response[0].id);
+            // fetchCatByBreed(response[0].id);
             renderSelect(response);
             onShowLoadListAction();
             return ;
